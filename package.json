@@ -1,0 +1,19 @@
+{
+  "name": "solutions-desk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CleberOtaviano/solutions-desk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CleberOtaviano/solutions-desk/issues"
+  },
+  "homepage": "https://github.com/CleberOtaviano/solutions-desk#readme"
+}
