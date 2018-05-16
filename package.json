@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/CleberOtaviano/solutions-desk/issues"
   },
-  "homepage": "https://github.com/CleberOtaviano/solutions-desk#readme"
+  "homepage": "https://github.com/CleberOtaviano/solutions-desk#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "extract-loader": "^2.0.1",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.2"
+  }
 }
