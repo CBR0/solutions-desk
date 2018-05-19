@@ -14,7 +14,6 @@ const Menu = () => (
         <Link to='/schedule' className="mdc-button">Schedule</Link>
       </ul>
     </nav>
-    <button className="mdc-button">gente</button>
   </header>
 )
 
