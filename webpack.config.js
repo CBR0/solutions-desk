@@ -10,13 +10,6 @@ module.exports = {
     devtool: 'source-map',
     module: {
         rules: [
-            // {
-            //     test: /\.js$/,
-            //     loader: 'babel-loader',
-            //     query: {
-            //         presets: ['es2015']
-            //     }
-            // },
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
@@ -25,31 +18,9 @@ module.exports = {
                     presets: ['es2015', 'react']
                 }
             },
-            // {
-            //     test: /\.jsx?$/,
-            //     use: ['babel-loader',],
-            //     exclude: /node_modules/,
-            // },
             {
                 test: /\.scss$/,
                 use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
-                        // use: [
-                            // {
-                            //     loader: 'file-loader',
-                            //     options: {
-                            //         name: 'bundle.css',
-                            //     },
-
-                            // },
-                            // { loader: 'extract-loader' },
-                            // { loader: 'css-loader' },
-                            // {
-                            //     loader: 'sass-loader',
-                            //     options: {
-                            //         includePaths: ['./node_modules']
-                            //     }
-                            // },
-                        // ],
                         use: [
                             {
                                 loader: "css-loader" // translates CSS into CommonJS
