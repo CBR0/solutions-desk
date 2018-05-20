@@ -5,9 +5,17 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     entry: "./index.js",
     output: {
-        filename: "bundle.js"
+        filename: "bundle.js",
+        publicPath: '/',
     },
     devtool: 'source-map',
+    devServer: {
+        // contentBase: path.join(__dirname, 'src'),
+        port: 3000,
+        filename: 'bundle.js',
+        compress: true,
+        historyApiFallback: true
+    },
     module: {
         rules: [
             {
