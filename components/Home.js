@@ -1,6 +1,7 @@
 import React from 'react'
 import {MDCTextField} from '@material/textfield';
 import {MDCRipple} from '@material/ripple';
+import { Link } from 'react-router-dom'
 
 export default class Home extends React.Component {
   componentDidMount() {
@@ -18,7 +19,7 @@ export default class Home extends React.Component {
     return (
       <div>
 
-        <h1>Welcome to the Tornadoes Website!</h1>
+        <h1>HOME PAGE </h1>
 
         <div className="mdc-text-field mdc-text-field--box">
           <input type="text" id="my-text-field" className="mdc-text-field__input" />
@@ -26,7 +27,7 @@ export default class Home extends React.Component {
           <div className="mdc-line-ripple"></div>
         </div>
         <div>
-          <button className="mdc-button foo-button">BOTAO</button>
+          <Link to='/login' className="mdc-button foo-button">FAZER LOGIN</Link>
         </div>
 
 

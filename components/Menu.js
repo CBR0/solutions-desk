@@ -10,7 +10,7 @@ import './menu.scss';
 const menuItems = [
   {
     icone: 'record_voice_over',
-    to: '/'
+    to: '/dashboard/schedule'
   },
   {
     icone: 'today',
