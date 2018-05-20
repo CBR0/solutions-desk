@@ -1,7 +1,105 @@
 @import "@material/button/mdc-button";
 @import "@material/textfield/mdc-text-field";
 
-.foo-button {
-    @include mdc-button-ink-color(teal);
-    @include mdc-states(teal);
+%noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+.ripple {
+    @include mdc-ripple-surface;
+    @include mdc-ripple-radius-bounded;
+    @include mdc-states;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+object {
+    display: none;
+}
+
+$primary: #084aa2;
+
+.root {
+    display: flex;
+
+    .container-menu {
+        width: 65px;
+        background-color: $primary;
+        color: #fff;
+        height: 100vh;
+        box-shadow: 3px 0 10px rgba(0, 0, 0, 0.25);
+
+        .lista-menu {
+            height: calc(100% - 85px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container-logo {
+            background-color: #fff;
+            height: 85px;
+            background-image: url('/assets/logo-high.png');
+            background-size: 45px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .flex {
+            flex: 1;
+        }
+        .item {
+            // border: 2px solid red;
+            text-align: center;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @extend %noselect;
+            overflow: hidden;
+            transition: all 0.25s ease;
+            border-radius: 100px;
+
+            &:first-child {
+                margin-top: 1rem;
+            }
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+            &.selecionado {
+                border-radius: 100px;
+                background-color: #fff;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+
+                a {
+                    color: $primary;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+            a {
+                transition: all 0.25s ease;
+                color: #fff;
+                font-size: 24px;
+                text-decoration: none;
+            }
+
+
+        }
+    }
+    .main {
+        // border: 2px solid red;
+        padding: 1rem;
+        width: 100%;
+    }
 }

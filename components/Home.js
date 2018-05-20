@@ -6,16 +6,13 @@ export default class Home extends React.Component {
   componentDidMount() {
 
     Array.prototype.forEach.call(
-      document.querySelectorAll(".mdc-button"),
-      function(element, index) {
-          let ripple = MDCRipple.attachTo(element);
-      }
-  );
+        document.querySelectorAll(".mdc-button"),
+        function(element, index) {
+            let ripple = MDCRipple.attachTo(element);
+        }
+    );
     const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
     // const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
-
-
-    debugger;
   }
   render() {
     return (

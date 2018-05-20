@@ -6,7 +6,7 @@ import Player from './Player'
 // The Roster component matches one of two different routes
 // depending on the full pathname
 const Roster = () => (
-  <div className="container-menu">
+  <div>
     <p>Mano do céu</p>
     <Switch>
 
