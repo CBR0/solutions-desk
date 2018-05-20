@@ -15,7 +15,31 @@ const menuItems = [
   {
     icone: 'today',
     to: '/schedule'
+  },
+  {
+    icone: 'assignment',
+    to: '/chamados'
+  },
+  {
+    icone: 'group',
+    to: '/usuarios'
+  },
+  {
+    icone: 'help',
+    to: '/help',
+    bottomAction: true
+  },
+  {
+    icone: 'person',
+    to: '/perfil',
+    bottomAction: true
+  },
+  {
+    icone: 'settings',
+    to: '/configuracoes',
+    bottomAction: true
   }
+
 ]
 export default class Menu extends React.Component {
   constructor() {
@@ -45,17 +69,20 @@ export default class Menu extends React.Component {
         <div className="container-logo"></div>
 
         <div className="lista-menu">
-          {menuItems.map(menuItem =>
-            <div className={"item " + (this.state.active === menuItem ? 'selecionado': '' ) }>
-              <Link to={menuItem.to} className="material-icons" onClick={this._handleClick.bind(this, menuItem)}>{menuItem.icone}</Link>
-            </div>
+          {menuItems.filter(function(item) {return  !item.bottomAction }).map(menuItem =>
+            <Link className={"item " + (this.state.active === menuItem ? 'selecionado': '' ) } to={menuItem.to} onClick={this._handleClick.bind(this, menuItem)}>
+              <i className="material-icons">{menuItem.icone}</i>
+            </Link>
           )}
 
           <span className="flex"></span>
 
-          <div className="item">
-            <Link to='/roster' className="material-icons ripple" onClick={this._handleClick.bind(this, this)}>settings</Link>
-          </div>
+          {menuItems.filter(function(item) {return  item.bottomAction }).map(menuItem =>
+
+            <Link className={"item " + (this.state.active === menuItem ? 'selecionado': '' ) } to={menuItem.to} onClick={this._handleClick.bind(this, menuItem)}>
+              <i className="material-icons">{menuItem.icone}</i>
+            </Link>
+          )}
         </div>
 
       </header>

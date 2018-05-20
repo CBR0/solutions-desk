@@ -68,6 +68,10 @@ $primary: #084aa2;
             transition: all 0.25s ease;
             border-radius: 100px;
 
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+
             &:first-child {
                 margin-top: 1rem;
             }
@@ -78,20 +82,11 @@ $primary: #084aa2;
                 border-radius: 100px;
                 background-color: #fff;
                 box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
-
-                a {
-                    color: $primary;
-                }
+                color: $primary;
             }
 
             &:hover {
                 cursor: pointer;
-            }
-            a {
-                transition: all 0.25s ease;
-                color: #fff;
-                font-size: 24px;
-                text-decoration: none;
             }
 
 
