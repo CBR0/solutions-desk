@@ -10,11 +10,11 @@ import './menu.scss';
 const menuItems = [
   {
     icone: 'record_voice_over',
-    to: '/dashboard/schedule'
+    to: '/dashboard/abrir-chamado'
   },
   {
     icone: 'today',
-    to: '/schedule'
+    to: '/dashboard/schedule'
   },
   {
     icone: 'assignment',
@@ -83,6 +83,10 @@ export default class Menu extends React.Component {
               <i className="material-icons">{menuItem.icone}</i>
             </Link>
           )}
+
+           <Link className={"item"} to='/login'>
+              <i className="material-icons">exit_to_app</i>
+            </Link>
         </div>
 
       </header>

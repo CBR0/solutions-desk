@@ -1,8 +1,9 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import Home from './Home'
+import Home from './home/Home'
 import Roster from './Roster'
 import Schedule from './Schedule'
+import AbrirChamado from './dashboard/chamado/Chamado'
 import { Link } from 'react-router-dom'
 
 // The Main component renders one of the three provided
@@ -12,11 +13,11 @@ import { Link } from 'react-router-dom'
 // when the pathname is exactly the string "/"
 const Main = () => (
   <main className="main">
-  <p>ROSTERS</p>
-    <Link to="/dashboard/roster">ROSTER</Link>
+    <p>MAIN</p>
     <Switch>
       <Route exact path='/' component={Home}/>
       <Route path='/dashboard/roster' component={Roster}/>
+      <Route path='/dashboard/abrir-chamado' component={AbrirChamado}/>
       <Route path='/dashboard/schedule' component={Schedule}/>
     </Switch>
   </main>
