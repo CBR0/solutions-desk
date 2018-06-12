@@ -13,7 +13,6 @@ import { Link } from 'react-router-dom'
 // when the pathname is exactly the string "/"
 const Main = () => (
   <main className="main">
-    <p>MAIN</p>
     <Switch>
       <Route exact path='/' component={Home}/>
       <Route path='/dashboard/roster' component={Roster}/>
